@@ -23,6 +23,7 @@ export const todayAllOrders = async (dispatch) => {
 export const sliderImages = async (dispatch) => {
   try {
     let responseData = await getSliderImages();
+    console.log(`tehe ${responseData.Images} hehe`)
     if (responseData && responseData.Images) {
       dispatch({ type: "sliderImages", payload: responseData.Images });
     }

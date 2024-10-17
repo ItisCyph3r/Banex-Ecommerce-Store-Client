@@ -21,7 +21,8 @@ const Slider = (props) => {
         {data.sliderImages.length > 0 ? (
           <img
             className="w-full"
-            src={`${apiURL}/uploads/customize/${data.sliderImages[slide].slideImage}`}
+            // src={`${apiURL}/uploads/customize/${data.sliderImages[slide].slideImage}`}
+            src={`${data.sliderImages[slide].slideImage}`}            
             alt="sliderImage"
           />
         ) : (

@@ -120,7 +120,7 @@ const UploadImageSection = () => {
 
 const AllImages = () => {
   const { data, dispatch } = useContext(DashboardContext);
-
+  console.log(`dtaa     ${data}       adasda -------------------sadasdas         ${dispatch}          sadsadas`)
   useEffect(() => {
     sliderImages(dispatch);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -159,7 +159,8 @@ const AllImages = () => {
               <div key={index} className="relative col-span-1 m-2 border">
                 <img
                   className="w-full md:h-32 object-center object-cover"
-                  src={`${apiURL}/uploads/customize/${item.slideImage}`}
+                  // src={`${apiURL}/uploads/customize/${item.slideImage}`}
+                  src={`${item.slideImage}`}
                   alt="sliderImages"
                 />
                 <span
