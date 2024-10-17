@@ -25,6 +25,7 @@ const SingleProduct = (props) => {
     dispatch({ type: "loading", payload: true });
     try {
       let responseData = await getAllProduct();
+      console.log(responseData)
       setTimeout(() => {
         if (responseData && responseData.Products) {
           dispatch({ type: "setProducts", payload: responseData.Products });

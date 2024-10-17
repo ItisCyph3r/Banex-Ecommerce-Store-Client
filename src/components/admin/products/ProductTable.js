@@ -8,6 +8,8 @@ const apiURL = process.env.REACT_APP_API_URL;
 const AllProduct = (props) => {
   const { data, dispatch } = useContext(ProductContext);
   const { products } = data;
+  
+  console.log(products)
 
   const [loading, setLoading] = useState(false);
 

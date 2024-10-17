@@ -25,6 +25,7 @@ const AddProductDetail = ({ categories }) => {
 
   const fetchData = async () => {
     let responseData = await getAllProduct();
+    console.log(responseData)
     setTimeout(() => {
       if (responseData && responseData.Products) {
         dispatch({
