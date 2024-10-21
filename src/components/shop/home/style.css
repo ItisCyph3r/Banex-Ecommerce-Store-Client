@@ -25,3 +25,8 @@
   background: #b7791f;
   cursor: pointer;
 }
+.custom-height {
+  height: 250px;
+  object-fit: contain;
+  overflow: hidden;
+}

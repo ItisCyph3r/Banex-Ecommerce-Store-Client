@@ -35,7 +35,7 @@ const CategoryList = () => {
           categories.map((item, index) => {
             return (
               <Fragment key={index}>
-                <div
+                {/* <div
                   onClick={(e) =>
                     history.push(`/products/category/${item._id}`)
                   }
@@ -44,9 +44,24 @@ const CategoryList = () => {
                   <img
                     src={`${item.cImage.url}`}
                     alt="pic"
+                    className="h-60 w-full object-cover min-h-60"  // Set height and maintain aspect ratio
+                  />
+                  <div className="font-medium">{item.cName}</div>
+                </div> */}
+                <div 
+                  onClick={(e) =>
+                    history.push(`/products/category/${item._id}`)
+                  }
+                  className="col-span-1 m-2 flex flex-col items-center justify-center space-y-2 cursor-pointer h-60"  // Set fixed height for container
+                >
+                  <img
+                    src={`${item.cImage.url}`}
+                    alt="pic"
+                    className="h-full w-full object-cover"  // Fill the container with the image
                   />
                   <div className="font-medium">{item.cName}</div>
                 </div>
+
               </Fragment>
             );
           })
